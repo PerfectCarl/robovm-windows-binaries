@@ -6,8 +6,8 @@
 
 my $openssl;
 
-my $dir = "/c/users/cran/Dropbox/docs/projects/github/robovm/temp/openssl-1.0.1h/dist/ssl";
-my $prefix = "/c/users/cran/Dropbox/docs/projects/github/robovm/temp/openssl-1.0.1h/dist";
+my $dir = "/c/users/cran/Dropbox/docs/projects/github/robovm/temp/openssl-1.0.1e/dist/ssl";
+my $prefix = "/c/users/cran/Dropbox/docs/projects/github/robovm/temp/openssl-1.0.1e/dist";
 
 if(defined $ENV{OPENSSL}) {
 	$openssl = $ENV{OPENSSL};

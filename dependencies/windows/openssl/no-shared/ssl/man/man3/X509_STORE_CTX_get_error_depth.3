@@ -129,7 +129,7 @@
 .\" ========================================================================
 .\"
 .IX Title "X509_STORE_CTX_get_error 3"
-.TH X509_STORE_CTX_get_error 3 "2014-06-05" "1.0.1h" "OpenSSL"
+.TH X509_STORE_CTX_get_error 3 "2013-02-11" "1.0.1e" "OpenSSL"
 .SH "NAME"
 X509_STORE_CTX_get_error, X509_STORE_CTX_set_error, X509_STORE_CTX_get_error_depth, X509_STORE_CTX_get_current_cert, X509_STORE_CTX_get1_chain, X509_verify_cert_error_string \- get or set certificate verification status information
 .SH "SYNOPSIS"
@@ -369,12 +369,12 @@ set by an application.
 .IX Header "NOTES"
 The above functions should be used instead of directly referencing the fields
 in the \fBX509_VERIFY_CTX\fR structure.
-.PP
+.Sp
 In versions of OpenSSL before 1.0 the current certificate returned by
 \&\fIX509_STORE_CTX_get_current_cert()\fR was never \fB\s-1NULL\s0\fR. Applications should
 check the return value before printing out any debugging information relating
 to the current certificate.
-.PP
+.Sp
 If an unrecognised error code is passed to \fIX509_verify_cert_error_string()\fR the
 numerical value of the unknown code is returned in a static buffer. This is not
 thread safe but will never happen unless an invalid code is passed.

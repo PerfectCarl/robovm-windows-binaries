@@ -129,7 +129,7 @@
 .\" ========================================================================
 .\"
 .IX Title "SSL_read 3"
-.TH SSL_read 3 "2014-06-05" "1.0.1h" "OpenSSL"
+.TH SSL_read 3 "2013-02-11" "1.0.1e" "OpenSSL"
 .SH "NAME"
 SSL_read \- read bytes from a TLS/SSL connection.
 .SH "SYNOPSIS"
@@ -210,8 +210,7 @@ The following return values can occur:
 .IX Item ">0"
 The read operation was successful; the return value is the number of
 bytes actually read from the \s-1TLS/SSL\s0 connection.
-.IP "\&0" 4
-.IX Item "0"
+.IP "0" 4
 The read operation was not successful. The reason may either be a clean
 shutdown due to a \*(L"close notify\*(R" alert sent by the peer (in which case
 the \s-1SSL_RECEIVED_SHUTDOWN\s0 flag in the ssl shutdown state is set

@@ -129,7 +129,7 @@
 .\" ========================================================================
 .\"
 .IX Title "SMIME 1"
-.TH SMIME 1 "2014-06-05" "1.0.1h" "OpenSSL"
+.TH SMIME 1 "2013-02-11" "1.0.1e" "OpenSSL"
 .SH "NAME"
 smime \- S/MIME utility
 .SH "SYNOPSIS"
@@ -265,7 +265,7 @@ triple \s-1DES\s0 (168 bits) \- \fB\-des3\fR,
 example \fB\-aes_128_cbc\fR. See \fBenc\fR for list of ciphers
 supported by your version of OpenSSL.
 .Sp
-If not specified triple \s-1DES\s0 is used. Only used with \fB\-encrypt\fR.
+If not specified 40 bit \s-1RC2\s0 is used. Only used with \fB\-encrypt\fR.
 .IP "\fB\-nointern\fR" 4
 .IX Item "-nointern"
 when verifying a message normally certificates (if any) included in
@@ -391,23 +391,22 @@ since the content is no longer part of the PKCS#7 structure the encoding
 remains \s-1DER\s0.
 .SH "EXIT CODES"
 .IX Header "EXIT CODES"
-.IP "\&0" 4
-.IX Item "0"
+.IP "0" 4
 the operation was completely successfully.
-.IP "\&1" 4
+.IP "1" 4
 .IX Item "1"
 an error occurred parsing the command options.
-.IP "\&2" 4
+.IP "2" 4
 .IX Item "2"
 one of the input files could not be read.
-.IP "\&3" 4
+.IP "3" 4
 .IX Item "3"
 an error occurred creating the PKCS#7 file or when reading the \s-1MIME\s0
 message.
-.IP "\&4" 4
+.IP "4" 4
 .IX Item "4"
 an error occurred decrypting or verifying the message.
-.IP "\&5" 4
+.IP "5" 4
 .IX Item "5"
 the message was verified correctly but an error occurred writing out
 the signers certificates.

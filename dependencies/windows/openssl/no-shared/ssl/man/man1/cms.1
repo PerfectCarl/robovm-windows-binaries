@@ -129,7 +129,7 @@
 .\" ========================================================================
 .\"
 .IX Title "CMS 1"
-.TH CMS 1 "2014-06-05" "1.0.1h" "OpenSSL"
+.TH CMS 1 "2013-02-11" "1.0.1e" "OpenSSL"
 .SH "NAME"
 cms \- CMS utility
 .SH "SYNOPSIS"
@@ -211,10 +211,6 @@ actual \s-1CMS\s0 type is <B>EnvelopedData<B>.
 decrypt mail using the supplied certificate and private key. Expects an
 encrypted mail message in \s-1MIME\s0 format for the input file. The decrypted mail
 is written to the output file.
-.IP "\fB\-debug_decrypt\fR" 4
-.IX Item "-debug_decrypt"
-this option sets the \fB\s-1CMS_DEBUG_DECRYPT\s0\fR flag. This option should be used
-with caution: see the notes section below.
 .IP "\fB\-sign\fR" 4
 .IX Item "-sign"
 sign mail using the supplied certificate and private key. Input file is
@@ -515,35 +511,24 @@ and no longer \s-1DER\s0. Streaming is supported for the \fB\-encrypt\fR operati
 Streaming is always used for the \fB\-sign\fR operation with detached data but
 since the content is no longer part of the \s-1CMS\s0 structure the encoding
 remains \s-1DER\s0.
-.PP
-If the \fB\-decrypt\fR option is used without a recipient certificate then an
-attempt is made to locate the recipient by trying each potential recipient
-in turn using the supplied private key. To thwart the \s-1MMA\s0 attack
-(Bleichenbacher's attack on \s-1PKCS\s0 #1 v1.5 \s-1RSA\s0 padding) all recipients are
-tried whether they succeed or not and if no recipients match the message
-is \*(L"decrypted\*(R" using a random key which will typically output garbage. 
-The \fB\-debug_decrypt\fR option can be used to disable the \s-1MMA\s0 attack protection
-and return an error if no recipient can be found: this option should be used
-with caution. For a fuller description see \fICMS_decrypt\fR\|(3)).
 .SH "EXIT CODES"
 .IX Header "EXIT CODES"
-.IP "\&0" 4
-.IX Item "0"
+.IP "0" 4
 the operation was completely successfully.
-.IP "\&1" 4
+.IP "1" 4
 .IX Item "1"
 an error occurred parsing the command options.
-.IP "\&2" 4
+.IP "2" 4
 .IX Item "2"
 one of the input files could not be read.
-.IP "\&3" 4
+.IP "3" 4
 .IX Item "3"
 an error occurred creating the \s-1CMS\s0 file or when reading the \s-1MIME\s0
 message.
-.IP "\&4" 4
+.IP "4" 4
 .IX Item "4"
 an error occurred decrypting or verifying the message.
-.IP "\&5" 4
+.IP "5" 4
 .IX Item "5"
 the message was verified correctly but an error occurred writing out
 the signers certificates.

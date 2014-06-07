@@ -129,7 +129,7 @@
 .\" ========================================================================
 .\"
 .IX Title "SSL_CTX_set_verify 3"
-.TH SSL_CTX_set_verify 3 "2014-06-05" "1.0.1h" "OpenSSL"
+.TH SSL_CTX_set_verify 3 "2013-02-11" "1.0.1e" "OpenSSL"
 .SH "NAME"
 SSL_CTX_set_verify, SSL_set_verify, SSL_CTX_set_verify_depth, SSL_set_verify_depth \- set peer certificate verification parameters
 .SH "SYNOPSIS"
@@ -290,8 +290,8 @@ that will always continue the \s-1TLS/SSL\s0 handshake regardless of verificatio
 failure, if wished. The callback realizes a verification depth limit with
 more informational output.
 .PP
-All verification errors are printed; information about the certificate chain
-is printed on request.
+All verification errors are printed, informations about the certificate chain
+are printed on request.
 The example is realized for a server that does allow but not require client
 certificates.
 .PP

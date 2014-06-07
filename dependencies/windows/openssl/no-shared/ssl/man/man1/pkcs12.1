@@ -129,7 +129,7 @@
 .\" ========================================================================
 .\"
 .IX Title "PKCS12 1"
-.TH PKCS12 1 "2014-06-05" "1.0.1h" "OpenSSL"
+.TH PKCS12 1 "2013-02-11" "1.0.1e" "OpenSSL"
 .SH "NAME"
 pkcs12 \- PKCS#12 file utility
 .SH "SYNOPSIS"
@@ -187,20 +187,16 @@ by default.
 .IX Item "-out filename"
 The filename to write certificates and private keys to, standard output by
 default.  They are all written in \s-1PEM\s0 format.
-.IP "\fB\-passin arg\fR" 4
-.IX Item "-passin arg"
+.IP "\fB\-pass arg\fR, \fB\-passin arg\fR" 4
+.IX Item "-pass arg, -passin arg"
 the PKCS#12 file (i.e. input file) password source. For more information about
 the format of \fBarg\fR see the \fB\s-1PASS\s0 \s-1PHRASE\s0 \s-1ARGUMENTS\s0\fR section in
 \&\fIopenssl\fR\|(1).
 .IP "\fB\-passout arg\fR" 4
 .IX Item "-passout arg"
-pass phrase source to encrypt any outputted private keys with. For more
+pass phrase source to encrypt any outputed private keys with. For more
 information about the format of \fBarg\fR see the \fB\s-1PASS\s0 \s-1PHRASE\s0 \s-1ARGUMENTS\s0\fR section
 in \fIopenssl\fR\|(1).
-.IP "\fB\-password arg\fR" 4
-.IX Item "-password arg"
-With \-export, \-password is equivalent to \-passout.
-Otherwise, \-password is equivalent to \-passin.
 .IP "\fB\-noout\fR" 4
 .IX Item "-noout"
 this option inhibits output of the keys and certificates to the output file

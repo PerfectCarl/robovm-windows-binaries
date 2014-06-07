@@ -129,7 +129,7 @@
 .\" ========================================================================
 .\"
 .IX Title "SSL_do_handshake 3"
-.TH SSL_do_handshake 3 "2014-06-05" "1.0.1h" "OpenSSL"
+.TH SSL_do_handshake 3 "2013-02-11" "1.0.1e" "OpenSSL"
 .SH "NAME"
 SSL_do_handshake \- perform a TLS/SSL handshake
 .SH "SYNOPSIS"
@@ -171,15 +171,14 @@ into or retrieved out of the \s-1BIO\s0 before being able to continue.
 .SH "RETURN VALUES"
 .IX Header "RETURN VALUES"
 The following return values can occur:
-.IP "\&0" 4
-.IX Item "0"
-The \s-1TLS/SSL\s0 handshake was not successful but was shut down controlled and
-by the specifications of the \s-1TLS/SSL\s0 protocol. Call \fISSL_get_error()\fR with the
-return value \fBret\fR to find out the reason.
-.IP "\&1" 4
+.IP "1" 4
 .IX Item "1"
 The \s-1TLS/SSL\s0 handshake was successfully completed, a \s-1TLS/SSL\s0 connection has been
 established.
+.IP "0" 4
+The \s-1TLS/SSL\s0 handshake was not successful but was shut down controlled and
+by the specifications of the \s-1TLS/SSL\s0 protocol. Call \fISSL_get_error()\fR with the
+return value \fBret\fR to find out the reason.
 .IP "<0" 4
 .IX Item "<0"
 The \s-1TLS/SSL\s0 handshake was not successful because a fatal error occurred either

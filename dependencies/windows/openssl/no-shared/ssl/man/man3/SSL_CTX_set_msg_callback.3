@@ -129,7 +129,7 @@
 .\" ========================================================================
 .\"
 .IX Title "SSL_CTX_set_msg_callback 3"
-.TH SSL_CTX_set_msg_callback 3 "2014-06-05" "1.0.1h" "OpenSSL"
+.TH SSL_CTX_set_msg_callback 3 "2013-02-11" "1.0.1e" "OpenSSL"
 .SH "NAME"
 SSL_CTX_set_msg_callback, SSL_CTX_set_msg_callback_arg, SSL_set_msg_callback, SSL_get_msg_callback_arg \- install callback for observing protocol messages
 .SH "SYNOPSIS"
@@ -144,8 +144,8 @@ SSL_CTX_set_msg_callback, SSL_CTX_set_msg_callback_arg, SSL_set_msg_callback, SS
 .Ve
 .PP
 .Vb 2
-\& void SSL_set_msg_callback(SSL *ssl, void (*cb)(int write_p, int version, int content_type, const void *buf, size_t len, SSL *ssl, void *arg));
-\& void SSL_set_msg_callback_arg(SSL *ssl, void *arg);
+\& void SSL_set_msg_callback(SSL_CTX *ctx, void (*cb)(int write_p, int version, int content_type, const void *buf, size_t len, SSL *ssl, void *arg));
+\& void SSL_set_msg_callback_arg(SSL_CTX *ctx, void *arg);
 .Ve
 .SH "DESCRIPTION"
 .IX Header "DESCRIPTION"

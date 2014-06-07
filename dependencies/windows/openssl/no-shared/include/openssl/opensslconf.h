@@ -100,8 +100,8 @@
 
 #if !(defined(VMS) || defined(__VMS)) /* VMS uses logical names instead */
 #if defined(HEADER_CRYPTLIB_H) && !defined(OPENSSLDIR)
-#define ENGINESDIR "/c/users/cran/Dropbox/docs/projects/github/robovm/temp/openssl-1.0.1h/dist/lib/engines"
-#define OPENSSLDIR "/c/users/cran/Dropbox/docs/projects/github/robovm/temp/openssl-1.0.1h/dist/ssl"
+#define ENGINESDIR "/c/users/cran/Dropbox/docs/projects/github/robovm/temp/openssl-1.0.1e/dist/lib/engines"
+#define OPENSSLDIR "/c/users/cran/Dropbox/docs/projects/github/robovm/temp/openssl-1.0.1e/dist/ssl"
 #endif
 #endif
 
